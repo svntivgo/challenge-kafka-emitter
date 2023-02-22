@@ -1,0 +1,13 @@
+version: '1.0'
+
+services:
+  app:
+    image: challenge-kafka-emitter:development
+    container_name: challenge-kafka-emitter
+    build:
+      context: .
+      dockerfile: containerfile.dev
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/app

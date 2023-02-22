@@ -1,0 +1,22 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""message """
+type Message {
+  id: ID!
+  message: String!
+}
+
+type Query {
+  message(id: String!): Message!
+}
+
+type Mutation {
+  addMessage(newMessageData: NewMessageInput!): Message!
+  removeMessage(id: String!): Boolean!
+}
+
+input NewMessageInput {
+  message: String!
+}
